@@ -1,7 +1,65 @@
+java.util.ArrayList;
+java.util.LinkedList;
+java.util.TreeSet;
+
+public class LinkedListTest {
+LinkedListTest infixstorage;
+
+public Calculator(){
+    infixstorage = new LinkedListTest();
+}
+
+public static LinkedListTest ReadInFile(String path){
+    File file = new File(path);
+    LinkedListTest list = new LinkedListTest();
+
+    try {
+        Scanner scanner = new Scanner(file);
+
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            StringTokenizer st = new StringTokenizer(line);
+            while (st.hasMoreTokens()){
+                list.insert(st.nextToken());
+            }
+        }
+        scanner.close();
+    } catch (FileNotFoundException e) {
+        e.printStackTrace();
+    }
+    return list;
+}
+
+}
+public class Treeset{
+
+public class StringTokenizerToArray {
+
+
 public class Main {
 public static void main(String[] args) {
 
-  
+  String[] tokenArray = getTokensArray("Java StringTokenizer to Array", " ");
+        
+        if(tokenArray != null) {
+            
+            for(int i = 0 ; i < tokenArray.length ; i++) {
+                System.out.println( "Index: " + i + ", token: " + tokenArray[i] );
+            }
+        }        
+}
+    Set<String> ts1 = new TreeSet<>();
+ 
+        ts1.add("A");
+        ts1.add("B");
+        ts1.add("C");
+ 
+        ts1.add("C");
+
+        System.out.println(ts1);
+    }
+}
+}
   // Get a string
 	
         System.out.println("Input a string ");
