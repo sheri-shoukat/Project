@@ -122,18 +122,18 @@ public static void main(String[] args) {
     }
 
 	
-	File sheriFile = new File("sheri.txt");
-    Scanner sheriInput = new Scanner(sheriFile);
+	File nameFile = new File("name.txt");
+    Scanner nameInput = new Scanner(nameFile);
     //Checks if the file exists, if not, the program is closed
-    if(!sheriFile.exists()) {
-      System.out.println("The sheri file doesn't exist.");
+    if(!nameFile.exists()) {
+      System.out.println("The name file doesn't exist.");
       System.exit(0);
     }
-    //Counts the number of lines in the sheri.txt file
-   sheri[] emp = new sheri[count];
-	while (sheriInput.hasNextLine()) {
+    //Counts the number of lines in the name.txt file
+   name[] emp = new name[count];
+	while (nameInput.hasNextLine()) {
       count++;
-      sheriInput.nextLine();
+      nameInput.nextLine();
     }
 	
 	File smallFile = new File("small.txt");
